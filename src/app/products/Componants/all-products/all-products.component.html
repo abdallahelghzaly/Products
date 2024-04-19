@@ -1,0 +1,17 @@
+
+<div class="box mt-5" *ngIf="!loading">
+
+  <div class="my-2 w-25">
+    <app-select [DataArray]="categoriesArray" [title]="'Catogires'" (SelectValue)="GetonceCatogery($event)" ></app-select>
+
+
+  </div>
+  <div class="row " >
+    <div  class="col-md-3 col-sm-12"  *ngFor="let item of ProductArray">
+    <app-product [data]="item" (item)="AddToCart($event)" ></app-product>
+    </div>
+  </div>
+</div>
+<div *ngIf="loading" class="text-center w-100 h-100 ">
+  <app-spinner></app-spinner>
+</div>

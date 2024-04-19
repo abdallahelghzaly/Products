@@ -1,0 +1,7 @@
+<label for="" class="my-1">{{title}}</label>
+<select class="form-control" (change)="detechChange($event)">
+  <option value="all" selected>All</option>
+  <option class="{{option}}" *ngFor="let option of DataArray">{{option}}</option>
+</select>
+
+
